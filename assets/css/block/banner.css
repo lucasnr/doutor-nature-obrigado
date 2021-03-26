@@ -1,0 +1,30 @@
+.banner .title {
+	color: #04b87d;
+	font-size: 2.5rem;
+	line-height: 1.5;
+	margin-bottom: 1.375rem;
+}
+
+.banner .subtitle {
+	color: #686767;
+	font-size: 1.125rem;
+	font-weight: 500;
+	line-height: 1.5;
+	margin-bottom: 0px;
+}
+
+.banner img {
+	margin-right: 3.375rem;
+	max-width: 29.1875rem;
+}
+
+@media (min-width: 992px) {
+	.banner .title {
+		font-size: 2.1875rem;
+		margin-bottom: 1.25rem;
+	}
+
+	.banner .subtitle {
+		font-size: 1.25rem;
+	}
+}

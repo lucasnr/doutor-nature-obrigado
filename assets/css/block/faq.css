@@ -1,0 +1,147 @@
+.faq::after {
+	border-top-color: #fff;
+}
+
+.faq .title {
+	font-family: "Roboto", sans-serif;
+	font-size: 1.875rem;
+	margin-bottom: 2.5rem;
+	padding: 0px 1rem;
+}
+
+.faq ul li .faq-item-header {
+	align-items: center;
+	color: #495663;
+	cursor: pointer;
+	display: flex;
+	justify-content: space-between;
+	padding: 2rem 1.375rem;
+}
+
+.faq ul li:not(:last-of-type) .faq-item-header {
+	border-bottom: 0.0625rem solid rgba(0, 0, 0, 0.1);
+}
+
+.faq ul li .faq-title {
+	font-size: 1.125rem;
+	font-weight: 500;
+	line-height: 1.375;
+	margin-bottom: 0px;
+	transition: color 0.3s ease;
+}
+
+.faq ul li .faq-button {
+	background-color: transparent;
+	border: 0.125rem solid #075074;
+	border-radius: 0px 0.625rem;
+	color: #075074;
+	margin-left: 1.625rem;
+	min-height: 2rem;
+	min-width: 2rem;
+	padding: 0px;
+	position: relative;
+	transition: background-color 0.3s ease, border-radius 0.3s ease,
+		color 0.3s ease;
+}
+
+.faq ul li.active .faq-item-header,
+.faq ul li.active .faq-title {
+	color: #ff594d;
+	font-weight: 700;
+}
+
+.faq ul li.active .faq-button {
+	background-color: #ff594d;
+	border-color: #ff594d;
+	border-radius: 0.625rem 0px;
+	color: #fff;
+}
+
+.faq ul li .faq-button::before,
+.faq ul li .faq-button::after {
+	background-color: currentColor;
+	border-radius: 80rem;
+	content: "";
+	display: block;
+	left: 50%;
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.faq ul li .faq-button::before {
+	height: 0.1875rem;
+	width: 0.875rem;
+}
+
+.faq ul li .faq-button::after {
+	height: 0.875rem;
+	width: 0.1875rem;
+}
+
+.faq ul li.active .faq-button::after {
+	display: none;
+}
+
+.faq ul li .faq-content {
+	background-color: #ebf0f8;
+	max-height: 0px;
+	overflow: hidden;
+	transition: max-height 0.3s ease;
+}
+
+.faq ul li .faq-content p:first-of-type {
+	margin-top: 2rem;
+}
+
+.faq ul li .faq-content p {
+	color: #364453;
+	font-size: 1.125rem;
+	font-weight: 300;
+	line-height: 1.75;
+	margin-bottom: 2rem;
+	padding: 0px 2rem;
+}
+
+.faq ul li .faq-content p:last-of-type {
+	margin-bottom: 2rem;
+}
+
+.faq ul li .faq-content p img {
+	display: block;
+	height: 2rem;
+	margin-right: 1rem;
+	min-width: 2.5rem;
+}
+
+.faq ul li .faq-content a {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.faq ul li.active .faq-content {
+	max-height: 200vh;
+}
+
+@media (min-width: 768px) {
+	.faq .title {
+		font-size: 2.625rem;
+	}
+}
+
+@media (min-width: 992px) {
+	.faq ul li .faq-title {
+		font-size: 1.25rem;
+	}
+
+	.faq ul li .faq-content p {
+		font-size: 1.25rem;
+		max-width: 91%;
+	}
+}
+
+@media (min-width: 992px) and (min-height: 576px) {
+	.faq ul li.active .faq-content {
+		max-height: 100vh;
+	}
+}

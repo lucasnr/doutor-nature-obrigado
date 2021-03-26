@@ -1,0 +1,74 @@
+.timer {
+	padding-bottom: 4rem !important;
+	padding-top: 5.125rem !important;
+}
+
+.timer .timer-title {
+	color: #686767;
+	font-size: 1.25rem;
+	line-height: 1.5;
+}
+
+.timer .timer-subtitle {
+	color: #364453;
+	font-size: 1.375rem;
+	line-height: 1.25;
+	margin-bottom: 2.75rem;
+	margin-top: 2.125rem;
+}
+
+.timer .button {
+	margin-top: 3.75rem;
+}
+
+.timer .timer-content {
+	align-items: center;
+	color: red;
+	display: flex;
+	justify-content: space-around;
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin: auto;
+	max-width: 21.875rem;
+}
+
+.timer .timer-content .divisor {
+	margin-bottom: 2.125rem;
+}
+
+.timer .timer-content .text {
+	align-items: center;
+	display: flex;
+	font-size: 1.2rem;
+	font-weight: 500;
+	justify-content: space-around;
+}
+
+.timer .timer-content .seconds,
+.timer .timer-content .minutes,
+.timer .timer-content .hours {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+@media (max-width: 413px) {
+	.timer .button {
+		font-size: 1rem;
+	}
+}
+
+@media (min-width: 576px) {
+	.timer .container {
+		padding-left: 2rem;
+		padding-right: 2rem;
+	}
+
+	.timer-content {
+		font-size: 3.4rem;
+	}
+
+	.timer .timer-content {
+		font-size: 3.125rem;
+	}
+}
