@@ -8,35 +8,44 @@ let day = hour * 24;
 let timer;
 
 const setCountDown = () => {
-  localStorage.getItem('countdown')
-    ? localStorage.getItem('countdown')
-    : localStorage.setItem('countdown', Date.now() + timerInSeconds);
+	localStorage.getItem("countdown")
+		? localStorage.getItem("countdown")
+		: localStorage.setItem("countdown", Date.now() + timerInSeconds);
 
-  timestamp = Number(localStorage.getItem('countdown'));
-  timestamp - Date.now() <= 1000
-    ? localStorage.setItem('countdown', Date.now() + timerInSeconds)
-    : timestamp;
+	timestamp = Number(localStorage.getItem("countdown"));
+	timestamp - Date.now() <= 1000
+		? localStorage.setItem("countdown", Date.now() + timerInSeconds)
+		: timestamp;
 };
 
 const showRemaining = () => {
-  setCountDown();
-  let now = new Date();
-  let left = new Date(timestamp) - now;
-  let hours = Math.floor((left % day) / hour);
-  let minutes = Math.floor((left % hour) / minute);
-  let seconds = Math.floor((left % minute) / second);
+	setCountDown();
+	let now = new Date();
+	let left = new Date(timestamp) - now;
+	let hours = Math.floor((left % day) / hour);
+	let minutes = Math.floor((left % hour) / minute);
+	let seconds = Math.floor((left % minute) / second);
 
-  document.querySelectorAll('.hours .countdown').forEach((el) => {
-    el.innerText = hours < 10 ? '0' + hours : hours;
-  });
-  document.querySelectorAll('.minutes .countdown').forEach((el) => {
-    el.innerText = minutes < 10 ? '0' + minutes : minutes;
-  });
-  document.querySelectorAll('.seconds .countdown').forEach((el) => {
-    el.innerText = seconds < 10 ? '0' + seconds : seconds;
-  });
-  setTimeout(showRemaining, 1000);
+	document.querySelectorAll(".hours .countdown").forEach((el) => {
+		el.innerText = hours < 10 ? "0" + hours : hours;
+	});
+	document.querySelectorAll(".minutes .countdown").forEach((el) => {
+		el.innerText = minutes < 10 ? "0" + minutes : minutes;
+	});
+	document.querySelectorAll(".seconds .countdown").forEach((el) => {
+		el.innerText = seconds < 10 ? "0" + seconds : seconds;
+	});
+	setTimeout(showRemaining, 1000);
 };
 
 setCountDown();
 showRemaining();
+
+const now = new Date();
+const date = document.getElementById("date");
+date.textContent =
+	String(now.getDate()).padStart(2, "0") +
+	"/" +
+	String(now.getMonth() + 1).padStart(2, "0") +
+	"/" +
+	now.getFullYear();
