@@ -2,7 +2,7 @@ body,
 input,
 button,
 textarea {
-	color: #364453;
+	color: #262626;
 	font-family: "Poppins", sans-serif;
 }
 
@@ -21,7 +21,7 @@ picture {
 }
 
 .container {
-	max-width: 70rem;
+	max-width: 74rem;
 }
 
 .triangle {
@@ -43,7 +43,7 @@ picture {
 }
 
 .title {
-	color: #364453;
+	color: inherit;
 	font-family: "PT Serif", sans-serif;
 	font-size: 2.1875rem;
 	font-weight: 700;
@@ -59,10 +59,10 @@ picture {
 	border: none;
 	color: #fff !important;
 	display: flex;
-	font-size: 1.25rem;
+	font-size: 1.4375rem;
 	font-weight: 700;
 	opacity: 1;
-	padding: 1rem;
+	padding: 0.625rem 1.5rem;
 	text-decoration: none !important;
 	text-transform: uppercase;
 	transition: opacity 0.3s ease;
@@ -74,19 +74,22 @@ picture {
 }
 
 .button svg {
-	height: 2rem;
+	height: 2.3125rem;
 	margin-left: 0.75rem;
-	width: 2rem;
+	width: 2.3125rem;
 }
 
 .font-weight-medium {
 	font-weight: 500;
 }
 
+main section {
+	padding-bottom: 2.75rem;
+	padding-top: 2.75rem;
+}
+
 main section:nth-of-type(odd) {
 	background-color: #ebf0f8;
-	padding-bottom: 2.375rem;
-	padding-top: 2.375rem;
 }
 
 #topbar {
@@ -98,14 +101,16 @@ main section:nth-of-type(odd) {
 	height: 1.25rem;
 }
 
+@media (min-width: 576px) {
+	main section {
+		padding-bottom: 3.75rem;
+		padding-top: 3.75rem;
+	}
+}
+
 @media (min-width: 768px) {
 	.title {
 		font-size: 2.375rem;
-	}
-
-	.button {
-		font-size: 1.5rem;
-		height: 3.875rem;
 	}
 
 	#topbar {
@@ -120,5 +125,9 @@ main section:nth-of-type(odd) {
 @media (max-width: 413px) {
 	br {
 		display: none !important;
+	}
+
+	.button {
+		font-size: 1rem;
 	}
 }

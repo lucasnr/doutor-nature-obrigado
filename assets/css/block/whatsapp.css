@@ -1,0 +1,12 @@
+.whatsapp::after {
+	border-top-color: #fff;
+}
+
+.whatsapp p {
+	font-size: 1.25rem;
+	margin-bottom: 2rem;
+}
+
+.whatsapp .font-italic {
+	color: #686767;
+}

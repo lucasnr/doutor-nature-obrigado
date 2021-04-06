@@ -84,7 +84,7 @@
 }
 
 .faq ul li .faq-content {
-	background-color: #ebf0f8;
+	background-color: #fff;
 	max-height: 0px;
 	overflow: hidden;
 	transition: max-height 0.3s ease;
